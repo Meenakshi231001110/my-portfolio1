@@ -13,24 +13,24 @@ html, body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  background-color: #610d49;
-  overflow-x: hidden;       /* ✅ Prevent horizontal scroll */
-  max-width: 100%;          /* ✅ Ensure width doesn't exceed viewport */
-  scroll-behavior: smooth;  /* Optional: smooth scrolling */
+  background-color: #000000;  /* ✅ Set background to black */
+  overflow-x: hidden;
+  max-width: 100%;
+  scroll-behavior: smooth;
 }
 
 /* NAVBAR */
 nav {
   position: fixed;
   top: 0;
-  width: 100%;              /* ✅ Changed from 100vw to 100% to avoid horizontal scroll */
+  width: 100%;  /* ✅ Use 100% instead of 100vw */
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   gap: 2rem;
   padding: 1rem 0;
   z-index: 1000;
-  overflow-x: hidden;       /* ✅ Just in case */
+  overflow-x: hidden;
 }
 
 /* NAV LINKS */
@@ -49,10 +49,10 @@ nav a:hover {
 /* SECTIONS */
 section {
   min-height: 100vh;
-  padding-top: 80px;         /* space for navbar */
+  padding-top: 80px;
   padding-left: 2rem;
   padding-right: 2rem;
-  max-width: 100%;           /* ✅ Avoid overflow */
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -67,15 +67,15 @@ p {
   line-height: 1.6;
 }
 
-/* OPTIONAL: Prevent accidental horizontal overflow from any element */
+/* IMAGES / MEDIA */
 img, video, canvas, iframe, div, span {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* OPTIONAL: Debugging (use if you're still unsure where overflow happens) */
+/* OPTIONAL: Debugging background (REMOVE this if it's still in your code!) */
 /*
-* {
-  outline: 1px solid red;
+body {
+  background-color: pink !important;  <-- ❌ Make sure this is deleted or commented out
 }
 */
