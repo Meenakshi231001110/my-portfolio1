@@ -1,6 +1,17 @@
+/* Apply globally */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
 body {
   margin: 0;
   padding: 0;
-  background-color: #610d49; /* Use plain black instead of big image */
+  background-color: #610d49;
   color: #0b0977;
+  overflow-x: hidden; /* 🚫 Prevent horizontal scroll */
 }
