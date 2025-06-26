@@ -1,17 +1,27 @@
-/* App.css — CLEAN VERSION */
+/* GLOBAL RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+/* BODY */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   color: #fff;
+  background-color: #610d49;
+  overflow-x: hidden; /* 🚫 Prevent horizontal scrolling */
 }
 
-/* Navbar */
+/* NAVBAR */
 nav {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw; /* Ensure it doesn't overflow */
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
@@ -20,6 +30,7 @@ nav {
   z-index: 1000;
 }
 
+/* NAV LINKS */
 nav a {
   color: #fff;
   text-decoration: none;
@@ -32,14 +43,17 @@ nav a:hover {
   color: #61dafb;
 }
 
-/* Section styling */
+/* SECTIONS */
 section {
   min-height: 100vh;
-  padding-top: 80px; /* space for navbar */
+  padding-top: 80px; /* navbar space */
   padding-left: 2rem;
   padding-right: 2rem;
+  max-width: 100vw; /* 🚫 Prevent content overflow */
+  overflow-x: hidden;
 }
 
+/* HEADINGS & PARAGRAPH */
 h1, h2 {
   margin-bottom: 1rem;
 }
