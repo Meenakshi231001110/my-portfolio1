@@ -1,5 +1,3 @@
-// src/pages/Contact.jsx
-
 import React from "react";
 
 export default function Contact() {
@@ -20,39 +18,33 @@ export default function Contact() {
         style={{
           display: "flex",
           flexDirection: "row",
-          gap: "3rem",
+          gap: "2rem",
           flexWrap: "wrap",
           maxWidth: "1100px",
           width: "100%",
-          background: "rgba(255,255,255,0.05)",
-          padding: "2rem",
+          background: "linear-gradient(145deg, #111, #1a1a1a)",
+          padding: "2.5rem",
           borderRadius: "16px",
-          boxShadow: "0 8px 20px rgba(0,0,0,0.5)",
+          boxShadow: "0 10px 25px rgba(0, 242, 254, 0.15)",
         }}
       >
-        {/* ✅ Left: Info Panel */}
+        {/* ✅ Left Panel */}
         <div style={{ flex: 1, minWidth: "280px" }}>
           <h2
             style={{
-              fontSize: "2.2rem",
+              fontSize: "2.4rem",
               marginBottom: "1rem",
-              color: "#61dafb",
-              textShadow: "0 0 10px rgba(97, 218, 251, 0.6)",
+              color: "#00f2fe",
+              textShadow: "0 0 12px rgba(0, 242, 254, 0.5)",
             }}
           >
             Let’s Connect 💌
           </h2>
-          <p
-            style={{
-              fontSize: "1.1rem",
-              marginBottom: "1.5rem",
-              lineHeight: "1.6",
-            }}
-          >
-            Reach out if you'd like to collaborate, have a question, or just want to connect!
+          <p style={{ fontSize: "1.1rem", marginBottom: "1.8rem", lineHeight: "1.6" }}>
+            Feel free to reach out if you'd like to collaborate, have a question, or just say hi!
           </p>
 
-          <ul style={{ listStyle: "none", padding: 0, fontSize: "1.1rem" }}>
+          <ul style={{ listStyle: "none", padding: 0, fontSize: "1.05rem", lineHeight: "1.8" }}>
             <li>
               📧 <strong>Email:</strong> meena13shi@gmail.com
             </li>
@@ -62,7 +54,11 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/meenakshi-r-2166052a2"
                 target="_blank"
                 rel="noreferrer"
-                style={{ color: "#61dafb", textDecoration: "none" }}
+                style={{
+                  color: "#00f2fe",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                }}
               >
                 Meenakshi R
               </a>
@@ -78,13 +74,14 @@ export default function Contact() {
             style={{
               display: "inline-block",
               marginTop: "2rem",
-              padding: "0.75rem 1.5rem",
-              backgroundColor: "#61dafb",
+              padding: "0.8rem 1.6rem",
+              backgroundColor: "#00f2fe",
               color: "#000",
               borderRadius: "8px",
               fontWeight: "bold",
               textDecoration: "none",
-              transition: "all 0.3s ease",
+              boxShadow: "0 0 12px rgba(0, 242, 254, 0.4)",
+              transition: "transform 0.3s ease",
             }}
             onMouseOver={(e) => (e.target.style.transform = "scale(1.05)")}
             onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
@@ -93,12 +90,12 @@ export default function Contact() {
           </a>
         </div>
 
-        {/* ✅ Right: Live Formspree Form */}
+        {/* ✅ Right Form */}
         <div style={{ flex: 1, minWidth: "280px" }}>
           <form
-            action="https://formspree.io/f/xvgrwelp" // ✅ YOUR real Formspree link
+            action="https://formspree.io/f/xvgrwelp"
             method="POST"
-            style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+            style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}
           >
             <input
               type="text"
@@ -124,13 +121,15 @@ export default function Contact() {
             <button
               type="submit"
               style={{
-                padding: "0.8rem",
-                backgroundColor: "#61dafb",
+                padding: "0.9rem",
+                backgroundColor: "#00f2fe",
+                color: "#0a0a0a",
                 border: "none",
                 borderRadius: "8px",
                 fontWeight: "bold",
                 cursor: "pointer",
-                transition: "all 0.3s ease",
+                transition: "transform 0.3s ease",
+                boxShadow: "0 0 10px rgba(0, 242, 254, 0.3)",
               }}
               onMouseOver={(e) => (e.target.style.transform = "scale(1.05)")}
               onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
@@ -144,7 +143,7 @@ export default function Contact() {
   );
 }
 
-// ✅ Shared input style
+// Shared input styling
 const inputStyle = {
   padding: "0.75rem",
   borderRadius: "8px",
@@ -154,4 +153,5 @@ const inputStyle = {
   backgroundColor: "#1c1c1c",
   color: "#fff",
   resize: "none",
+  boxShadow: "inset 0 0 4px rgba(0, 242, 254, 0.1)",
 };
